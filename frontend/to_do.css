@@ -19,6 +19,17 @@ header {
     margin: 0 auto;
 }
 
+/* CSS for clock */
+#clock {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #264653;
+}
+
+
 header h1 {
     margin-top: 100px;
     font-size: 40px; /* Equivalent to 2.5rem */
@@ -190,6 +201,32 @@ main {
     font-style: italic; /* Example styling */
 }
 
+.task .actions .complete {
+    color: #6dd8cc; /* Color for completed button */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 18px; /* Adjust font size */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.task .actions .complete:hover {
+    color: #1a535c; /* Darken color on hover */
+}
+
+.task .actions .complete:active {
+    color: #2a9d8f; /* Restore color on active */
+}
+
+.task .actions .complete.completed {
+    color: #1a535c; /* Color when task is completed */
+}
+
+.task.completed {
+    background-color: lightgreen; /* Light green background for completed tasks */
+}
+
 @media screen and (max-width: 600px) {
     #new_task {
         font-size: 16px; /* Equivalent to 1rem */
@@ -219,3 +256,5 @@ main {
         font-size: 16px; /* Equivalent to 1rem */
     }
 }
+
+

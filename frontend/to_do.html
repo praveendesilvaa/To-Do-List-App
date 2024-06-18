@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
     <link rel="stylesheet" href="to_do.css" />
+    <!-- Favicon link using relative path -->
+    <link rel="icon" href="images/clock-icon-design-element-logo-element-illustration-clock-symbol-icon-free-vector.jpg" type="image/jpeg">
 </head>
 <body>
     <header>
         <h1>To Do List</h1>
+        <div id="clock"></div> <!-- Container for the clock -->
         <form id="task-form">
             <input 
                 type="text" 
@@ -33,6 +36,6 @@
             <div id="tasks" class="task-container"></div>
         </section>
     </main>
-    <script src="to_do.js"></script>
+    <script src="to_do.js"></script> <!-- Include JavaScript -->
 </body>
 </html>

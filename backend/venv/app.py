@@ -33,7 +33,8 @@ def get_tasks():
     data = [{'id': str(task['_id']),
              'text': task['text'],
              'created_at': task.get('created_at'),
-             'deadline': task.get('deadline')}
+             'deadline': task.get('deadline'),
+             'completed': task.get('completed', False)}  # Include completed field
             for task in tasks]
     # Return the list of tasks as a JSON response
     return jsonify(data)
@@ -47,7 +48,7 @@ def add_task():
 
     if text:
         # Create a new task with the provided text and current datetime
-        new_task = {'text': text, 'created_at': datetime.utcnow()}
+        new_task = {'text': text, 'created_at': datetime.utcnow(), 'completed': False}  # Initialize completed as False
         if deadline:
             new_task['deadline'] = deadline
 
@@ -66,13 +67,14 @@ def update_task(task_id):
     task_data = request.json
     text = task_data.get('text', '')
     deadline = task_data.get('deadline', None)
+    completed = task_data.get('completed', False)  # Retrieve completed field from request body
 
     if text:
         # Find the task by its ID
         task = tasks_collection.find_one({'_id': ObjectId(task_id)})
         if task:
             # Prepare the update data
-            update_data = {'text': text}
+            update_data = {'text': text, 'completed': completed}  # Include completed field in update
             if deadline:
                 update_data['deadline'] = deadline
 
@@ -81,7 +83,7 @@ def update_task(task_id):
             if result.modified_count:
                 # Retrieve and return the updated task
                 updated_task = tasks_collection.find_one({'_id': ObjectId(task_id)})
-                return jsonify({'id': task_id, 'text': updated_task['text'], 'deadline': updated_task.get('deadline'), 'created_at': updated_task.get('created_at')})
+                return jsonify({'id': task_id, 'text': updated_task['text'], 'deadline': updated_task.get('deadline'), 'completed': updated_task.get('completed', False), 'created_at': updated_task.get('created_at')})
             return jsonify({'error': 'Task not found'}), 404
         return jsonify({'error': 'Task not found'}), 404
 
@@ -99,4 +101,4 @@ def delete_task(task_id):
     return jsonify({'error': 'Task not found'}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)  # Run the Flask app in debug mode
+    app.run(port=5000, debug=True) # Run the Flask app in debug mode
