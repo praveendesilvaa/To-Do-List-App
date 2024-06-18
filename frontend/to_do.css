@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #f7f1f1;
+    background-color: #c8ccd4; /* Keep the body color */
+}
+
+header {
+    padding: 40px 20px; /* Equivalent to 2rem 1rem */
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin-top: 100px;
+    font-size: 40px; /* Equivalent to 2.5rem */
+    font-weight: 300;
+    color: #e76f51; /* Header text color */
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#task-form {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new_task {
+    flex: 1 1 0%;
+    background-color: #264653; /* Input background color */
+    padding: 20px; /* Equivalent to 1.25rem */
+    border-radius: 20px; /* Equivalent to 1.25rem */
+    margin-right: 10px; /* Adjusted margin */
+    color: #f7f1f1; /* Input text color */
+    font-size: 20px; /* Equivalent to 1.25rem */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#new_task:hover {
+    background-color: #2a9d8f; /* Darken background on hover */
+}
+
+#task_deadline {
+    padding: 15px; /* Equivalent to 0.75rem */
+    border: 1px solid #f4a261; /* Deadline input border color */
+    border-radius: 10px; /* Equivalent to 0.625rem */
+    margin-right: 10px; /* Adjusted margin */
+    font-size: 18px; /* Equivalent to 1.125rem */
+    transition: border-color 0.3s;
+}
+
+#task_deadline:hover {
+    border-color: #e76f51; /* Darken border color on hover */
+}
+
+#new_task_sub {
+    background-color: #f4a261; /* Add task button background color */
+    color: #e76f51; /* Add task button text color */
+    font-size: 20px; /* Equivalent to 1.25rem */
+    font-weight: 700;
+    border: none; /* Remove border if not needed */
+    padding: 15px 30px; /* Equivalent to 0.75rem 1.5rem */
+    border-radius: 20px; /* Equivalent to 1.25rem */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#new_task_sub:hover {
+    background-color: #e9c46a; /* Darken background on hover */
+    color: #f7f1f1; /* Change text color on hover */
+}
+
+#new_task_sub:active {
+    background-color: #f4a261; /* Restore background color on active */
+    color: #f7f1f1; /* Restore text color on active */
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* Equivalent to 0 1rem */
+}
+
+.task-list {
+    padding: 20px; /* Equivalent to 1.25rem */
+    border: 1px solid #6B7280; /* Added border around task list */
+    border-radius: 20px; /* Equivalent to 1.25rem */
+}
+
+.task-list h2 {
+    font-size: 32px; /* Equivalent to 2rem */
+    font-weight: 300;
+    color: #6B7280;
+    margin-bottom: 20px; /* Equivalent to 1.25rem */
+    text-align: center;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between; /* Align items to the right */
+    align-items: center; /* Center vertically */
+    background-color: #111827;
+    padding: 20px; /* Equivalent to 1.25rem */
+    border-radius: 20px; /* Equivalent to 1.25rem */
+    margin-bottom: 20px; /* Equivalent to 1.25rem */
+    transition: background-color 0.3s;
+}
+
+#tasks .task:hover {
+    background-color: #264653; /* Darken background on hover */
+}
+
+.task .content {
+    flex: 1 1 0%;
+    margin-bottom: 10px; /* Added margin bottom for spacing */
+}
+
+.task .content .text {
+    color: #f7f1f1;
+    font-size: 18px; /* Equivalent to 1.125rem */
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+    overflow-wrap: break-word; /* Prevents text overflow */
+}
+
+.task .content .text.completed {
+    text-decoration: line-through; /* Adds strikethrough effect */
+    color: #6B7280; /* Changes color for completed tasks */
+}
+
+.task .actions {
+    display: flex;
+    gap: 10px; /* Added gap between buttons */
+}
+
+.task .actions button {
+    cursor: pointer;
+    font-size: 16px; /* Equivalent to 1rem */
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 20px; /* Equivalent to 0.625rem 1.25rem */
+}
+
+.task .actions button:hover {
+    opacity: 0.7;
+}
+
+.task .actions button:active {
+    opacity: 0.7;
+}
+
+.task .actions .edit {
+    background-image: linear-gradient(to right, #e76f51, #f4a261);
+    -webkit-background-clip: text; /* Vendor-prefixed property */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+    color: #ef0e3b;
+}
+
+.task .text.deadline-passed {
+    color: red; /* Example styling */
+    font-style: italic; /* Example styling */
+}
+
+@media screen and (max-width: 600px) {
+    #new_task {
+        font-size: 16px; /* Equivalent to 1rem */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    #task_deadline {
+        font-size: 14px; /* Equivalent to 0.875rem */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    #new_task_sub {
+        font-size: 16px; /* Equivalent to 1rem */
+        padding: 15px 20px; /* Equivalent to 0.75rem 1rem */
+    }
+
+    .task .actions button {
+        font-size: 14px; /* Equivalent to 0.875rem */
+        padding: 10px 15px; /* Equivalent to 0.625rem 0.9375rem */
+    }
+
+    .task-list h2 {
+        font-size: 24px; /* Equivalent to 1.5rem */
+    }
+
+    .task .content .text {
+        font-size: 16px; /* Equivalent to 1rem */
+    }
+}
