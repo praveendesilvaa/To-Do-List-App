@@ -1,25 +1,26 @@
+/* Apply box-sizing border-box model globally */
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Changed font family to Poppins */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font family */
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    color: #f7f1f1;
-    background-color: #c8ccd4; /* Keep the body color */
+    color: #f7f1f1; /* Set text color */
+    background-color: #c8ccd4; /* Set background color */
 }
 
 header {
-    padding: 40px 20px; /* Equivalent to 2rem 1rem */
+    padding: 40px 20px; 
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
 }
 
-/* CSS for clock */
+/* Styling for the clock display */
 #clock {
     position: absolute;
     top: 20px;
@@ -29,10 +30,9 @@ header {
     color: #264653;
 }
 
-
 header h1 {
     margin-top: 100px;
-    font-size: 40px; /* Equivalent to 2.5rem */
+    font-size: 40px; 
     font-weight: 300;
     color: #e76f51; /* Header text color */
     margin-bottom: 50px;
@@ -46,6 +46,7 @@ header h1 {
     margin: 0 auto;
 }
 
+/* Base styles for input and buttons */
 input,
 button {
     appearance: none;
@@ -57,51 +58,51 @@ button {
 #new_task {
     flex: 1 1 0%;
     background-color: #264653; /* Input background color */
-    padding: 20px; /* Equivalent to 1.25rem */
-    border-radius: 20px; /* Equivalent to 1.25rem */
-    margin-right: 10px; /* Adjusted margin */
-    color: #f7f1f1; /* Input text color */
-    font-size: 20px; /* Equivalent to 1.25rem */
-    transition: background-color 0.3s, color 0.3s;
+    padding: 20px; 
+    border-radius: 20px; /* Rounded corners */
+    margin-right: 10px; /* Margin between input and deadline */
+    color: #f7f1f1; /* Text color */
+    font-size: 20px; /* Font size equivalent to 1.25rem */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 #new_task:hover {
-    background-color: #2a9d8f; /* Darken background on hover */
+    background-color: #2a9d8f; /* Darker background on hover */
 }
 
 #task_deadline {
-    padding: 15px; /* Equivalent to 0.75rem */
-    border: 1px solid #f4a261; /* Deadline input border color */
-    border-radius: 10px; /* Equivalent to 0.625rem */
-    margin-right: 10px; /* Adjusted margin */
-    font-size: 18px; /* Equivalent to 1.125rem */
-    transition: border-color 0.3s;
+    padding: 15px;
+    border: 1px solid #f4a261; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    margin-right: 10px; /* Margin between input and add button */
+    font-size: 18px; 
+    transition: border-color 0.3s; /* Smooth transition */
 }
 
 #task_deadline:hover {
-    border-color: #e76f51; /* Darken border color on hover */
+    border-color: #e76f51; /* Darker border on hover */
 }
 
 #new_task_sub {
-    background-color: #f4a261; /* Add task button background color */
-    color: #e76f51; /* Add task button text color */
-    font-size: 20px; /* Equivalent to 1.25rem */
+    background-color: #f4a261; /* Button background color */
+    color: #e76f51; /* Button text color */
+    font-size: 20px; 
     font-weight: 700;
-    border: none; /* Remove border if not needed */
-    padding: 15px 30px; /* Equivalent to 0.75rem 1.5rem */
-    border-radius: 20px; /* Equivalent to 1.25rem */
+    border: none; /* Remove border */
+    padding: 15px 30px; 
+    border-radius: 20px; /* Rounded corners */
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 #new_task_sub:hover {
-    background-color: #e9c46a; /* Darken background on hover */
-    color: #f7f1f1; /* Change text color on hover */
+    background-color: #e9c46a; /* Darker background on hover */
+    color: #f7f1f1; /* Lighter text on hover */
 }
 
 #new_task_sub:active {
-    background-color: #f4a261; /* Restore background color on active */
-    color: #f7f1f1; /* Restore text color on active */
+    background-color: #f4a261; /* Restore background color on click */
+    color: #f7f1f1; /* Restore text color on click */
 }
 
 main {
@@ -109,20 +110,20 @@ main {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px; /* Equivalent to 0 1rem */
+    padding: 0 20px; 
 }
 
 .task-list {
-    padding: 20px; /* Equivalent to 1.25rem */
-    border: 1px solid #6B7280; /* Added border around task list */
-    border-radius: 20px; /* Equivalent to 1.25rem */
+    padding: 20px; 
+    border: 1px solid #6B7280; /* Border color */
+    border-radius: 20px; /* Rounded corners */
 }
 
 .task-list h2 {
-    font-size: 32px; /* Equivalent to 2rem */
+    font-size: 32px; 
     font-weight: 300;
-    color: #6B7280;
-    margin-bottom: 20px; /* Equivalent to 1.25rem */
+    color: #6B7280; /* Text color */
+    margin-bottom: 20px; 
     text-align: center;
 }
 
@@ -130,93 +131,93 @@ main {
     display: flex;
     justify-content: space-between; /* Align items to the right */
     align-items: center; /* Center vertically */
-    background-color: #111827;
-    padding: 20px; /* Equivalent to 1.25rem */
-    border-radius: 20px; /* Equivalent to 1.25rem */
-    margin-bottom: 20px; /* Equivalent to 1.25rem */
-    transition: background-color 0.3s;
+    background-color: #111827; /* Task background color */
+    padding: 20px; 
+    border-radius: 20px; /* Rounded corners */
+    margin-bottom: 20px; 
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 #tasks .task:hover {
-    background-color: #264653; /* Darken background on hover */
+    background-color: #264653; /* Darker background on hover */
 }
 
 .task .content {
     flex: 1 1 0%;
-    margin-bottom: 10px; /* Added margin bottom for spacing */
+    margin-bottom: 10px; /* Margin at the bottom */
 }
 
 .task .content .text {
-    color: #f7f1f1;
-    font-size: 18px; /* Equivalent to 1.125rem */
+    color: #f7f1f1; /* Text color */
+    font-size: 18px; 
     width: 100%;
     display: block;
-    transition: 0.4s;
-    overflow-wrap: break-word; /* Prevents text overflow */
+    transition: 0.4s; /* Smooth transition */
+    overflow-wrap: break-word; /* Prevent text overflow */
 }
 
 .task .content .text.completed {
-    text-decoration: line-through; /* Adds strikethrough effect */
-    color: #6B7280; /* Changes color for completed tasks */
+    text-decoration: line-through; /* Strikethrough effect */
+    color: #6B7280; /* Color for completed tasks */
 }
 
 .task .actions {
     display: flex;
-    gap: 10px; /* Added gap between buttons */
+    gap: 10px; /* Gap between buttons */
 }
 
 .task .actions button {
     cursor: pointer;
-    font-size: 16px; /* Equivalent to 1rem */
+    font-size: 16px; /* Font size equivalent to 1rem */
     font-weight: 700;
     text-transform: uppercase;
-    transition: 0.3s;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px 20px; /* Equivalent to 0.625rem 1.25rem */
+    transition: 0.3s; /* Smooth transition */
+    background-color: #f0f0f0; /* Button background color */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; 
 }
 
 .task .actions button:hover {
-    opacity: 0.7;
+    opacity: 0.7; /* Reduce opacity on hover */
 }
 
 .task .actions button:active {
-    opacity: 0.7;
+    opacity: 0.7; /* Reduce opacity on click */
 }
 
 .task .actions .edit {
-    background-image: linear-gradient(to right, #e76f51, #f4a261);
+    background-image: linear-gradient(to right, #e76f51, #f4a261); /* Gradient background */
     -webkit-background-clip: text; /* Vendor-prefixed property */
     background-clip: text; /* Standard property */
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; /* Transparent text */
 }
 
 .task .actions .delete {
-    color: #ef0e3b;
+    color: #ef0e3b; /* Delete button color */
 }
 
 .task .text.deadline-passed {
-    color: red; /* Example styling */
-    font-style: italic; /* Example styling */
+    color: red; /* Color for tasks with passed deadline */
+    font-style: italic; /* Italics for passed deadlines */
 }
 
 .task .actions .complete {
-    color: #6dd8cc; /* Color for completed button */
+    color: #6dd8cc; /* Color for complete button */
     background-color: transparent; /* Transparent background */
     border: none; /* Remove border */
-    padding: 10px; /* Adjust padding as needed */
-    font-size: 18px; /* Adjust font size */
+    padding: 10px; /* Padding */
+    font-size: 18px; 
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Smooth transition */
 }
 
 .task .actions .complete:hover {
-    color: #1a535c; /* Darken color on hover */
+    color: #1a535c; /* Darker color on hover */
 }
 
 .task .actions .complete:active {
-    color: #fdfdfd; /* Restore color on active */
+    color: #fdfdfd; /* Color on click */
 }
 
 .task .actions .complete.completed {
@@ -229,32 +230,30 @@ main {
 
 @media screen and (max-width: 600px) {
     #new_task {
-        font-size: 16px; /* Equivalent to 1rem */
+        font-size: 16px; 
         margin-right: 5px; /* Adjusted margin */
     }
 
     #task_deadline {
-        font-size: 14px; /* Equivalent to 0.875rem */
+        font-size: 14px; 
         margin-right: 5px; /* Adjusted margin */
     }
 
     #new_task_sub {
-        font-size: 16px; /* Equivalent to 1rem */
-        padding: 15px 20px; /* Equivalent to 0.75rem 1rem */
+        font-size: 16px; 
+        padding: 15px 20px;
     }
 
     .task .actions button {
-        font-size: 14px; /* Equivalent to 0.875rem */
-        padding: 10px 15px; /* Equivalent to 0.625rem 0.9375rem */
+        font-size: 14px; 
+        padding: 10px 15px; 
     }
 
     .task-list h2 {
-        font-size: 24px; /* Equivalent to 1.5rem */
+        font-size: 24px; 
     }
 
     .task .content .text {
-        font-size: 16px; /* Equivalent to 1rem */
+        font-size: 16px; 
     }
 }
-
-

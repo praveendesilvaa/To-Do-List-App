@@ -5,37 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
-    <link rel="stylesheet" href="to_do.css" />
+    <link rel="stylesheet" href="to_do.css" /> <!-- Link to external CSS file -->
     <!-- Favicon link using relative path -->
     <link rel="icon" href="images/clock-icon-design-element-logo-element-illustration-clock-symbol-icon-free-vector.jpg" type="image/jpeg">
 </head>
 <body>
     <header>
-        <h1>To Do List</h1>
-        <div id="clock"></div> <!-- Container for the clock -->
-        <form id="task-form">
+        <h1>To Do List</h1> <!-- Main header/title of the application -->
+        <div id="clock"></div> <!-- Container for displaying the clock -->
+        <form id="task-form"> <!-- Form for adding new tasks -->
             <input 
                 type="text" 
                 name="new_task" 
                 id="new_task" 
-                placeholder="What's Your Plan?" />
+                placeholder="What's Your Plan?" /> <!-- Input for task description -->
             <input 
                 type="date" 
                 name="task_deadline" 
                 id="task_deadline" 
-                placeholder="Deadline" />
+                placeholder="Deadline" /> <!-- Input for task deadline -->
             <input 
                 type="submit"
                 id="new_task_sub" 
-                value="Add task" />
+                value="Add task" /> <!-- Submit button to add new task -->
         </form>
     </header>
     <main>
         <section class="task-list">
-            <h2>Tasks</h2>
-            <div id="tasks" class="task-container"></div>
+            <h2>Tasks</h2> <!-- Heading for the list of tasks -->
+            <div id="tasks" class="task-container"></div> <!-- Container for displaying tasks -->
         </section>
     </main>
-    <script src="to_do.js"></script> <!-- Include JavaScript -->
+    <script src="to_do.js"></script> <!-- Include JavaScript file for functionality -->
 </body>
 </html>
