@@ -216,7 +216,7 @@ main {
 }
 
 .task .actions .complete:active {
-    color: #2a9d8f; /* Restore color on active */
+    color: #fdfdfd; /* Restore color on active */
 }
 
 .task .actions .complete.completed {
@@ -224,7 +224,7 @@ main {
 }
 
 .task.completed {
-    background-color: lightgreen; /* Light green background for completed tasks */
+    background-color: rgb(142, 206, 142); /* Light green background for completed tasks */
 }
 
 @media screen and (max-width: 600px) {
