@@ -6,13 +6,15 @@ This is a simple To-Do list application built using HTML, CSS, and JavaScript. I
 
 ## Installation
 
-1. **Clone the Repository:**
+1. **Clone the Repository:** into vscode
 2.  **Navigate into the Project Directory:**
 
 3.  ## Usage
 
 1. **Start the Application:**
 - Open the `to_do.html` file in your web browser.
+
+Make sure to run python backend which is app.py
 
 2. **Add a New Task:**
 - Enter a task description in the input field labeled "What's Your Plan?" and optionally set a deadline using the date picker.
